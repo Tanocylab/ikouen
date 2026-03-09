@@ -8,6 +8,44 @@ interface ParkCardProps {
   initialPhotos: string[]
 }
 
+function ParkPlaceholder({ park }: { park: Park }) {
+  const getStyle = () => {
+    if (park.equipment.includes('水遊び場')) {
+      return { from: '#0891b2', to: '#0d9488', icon: '💧', sub: '水遊びができる公園' }
+    }
+    if (park.equipment.includes('アスレチック')) {
+      return { from: '#65a30d', to: '#15803d', icon: '🏃', sub: 'アスレチックがある公園' }
+    }
+    if (park.equipment.includes('複合遊具')) {
+      return { from: '#16a34a', to: '#166534', icon: '🛝', sub: '複合遊具がある公園' }
+    }
+    if (park.shade) {
+      return { from: '#15803d', to: '#14532d', icon: '🌲', sub: '木陰が多い公園' }
+    }
+    return { from: '#4ade80', to: '#16a34a', icon: '🌳', sub: '日当たり良好な公園' }
+  }
+
+  const s = getStyle()
+
+  return (
+    <div
+      className="h-44 flex flex-col items-center justify-center gap-2 relative overflow-hidden"
+      style={{ background: `linear-gradient(135deg, ${s.from}, ${s.to})` }}
+    >
+      {/* 背景の装飾円 */}
+      <div className="absolute -top-6 -right-6 w-32 h-32 rounded-full opacity-10 bg-white" />
+      <div className="absolute -bottom-8 -left-4 w-40 h-40 rounded-full opacity-10 bg-white" />
+
+      <span className="text-5xl drop-shadow-sm">{s.icon}</span>
+      <span className="text-white text-base font-bold drop-shadow">{park.name}</span>
+      <span className="text-white text-xs opacity-80">{s.sub}</span>
+      <span className="mt-1 text-white text-xs opacity-60 bg-white/20 px-3 py-1 rounded-full">
+        📷 写真を追加してPRしよう
+      </span>
+    </div>
+  )
+}
+
 export default function ParkCard({ park, initialPhotos }: ParkCardProps) {
   const [photos, setPhotos] = useState<string[]>(initialPhotos)
   const [uploading, setUploading] = useState(false)
@@ -61,14 +99,12 @@ export default function ParkCard({ park, initialPhotos }: ParkCardProps) {
               key={i}
               src={url}
               alt={`${park.name} 写真${i + 1}`}
-              className="h-36 w-48 object-cover rounded-xl flex-shrink-0"
+              className="h-44 w-64 object-cover rounded-xl flex-shrink-0"
             />
           ))}
         </div>
       ) : (
-        <div className="h-24 bg-green-50 flex items-center justify-center text-4xl">
-          🌿
-        </div>
+        <ParkPlaceholder park={park} />
       )}
 
       <div className="p-4">
