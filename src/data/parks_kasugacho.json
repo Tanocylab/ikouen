@@ -1,0 +1,72 @@
+[
+  {
+    "id": "harusan",
+    "name": "はるさん公園",
+    "address": "練馬区春日町4丁目",
+    "equipment": ["滑り台", "ブランコ", "砂場"],
+    "toilet": false,
+    "shade": true,
+    "stroller": true,
+    "description": "地域の子どもたちに親しまれている小さな公園。木陰があり夏も快適"
+  },
+  {
+    "id": "kasugacho-nishi",
+    "name": "春日町西公園",
+    "address": "練馬区春日町3丁目",
+    "equipment": ["滑り台", "鉄棒", "ベンチ"],
+    "toilet": true,
+    "shade": true,
+    "stroller": true,
+    "description": "トイレ完備で小さい子連れも安心。木陰が多く夏でも涼しく過ごせる"
+  },
+  {
+    "id": "suzushiro",
+    "name": "すずしろ公園",
+    "address": "練馬区春日町2丁目",
+    "equipment": ["複合遊具", "砂場", "スプリング遊具"],
+    "toilet": false,
+    "shade": false,
+    "stroller": true,
+    "description": "広い砂場が自慢の公園。複合遊具で年齢の違う子どもも一緒に遊べる"
+  },
+  {
+    "id": "keyaki",
+    "name": "けやき児童公園",
+    "address": "練馬区春日町1丁目",
+    "equipment": ["ブランコ", "滑り台", "砂場"],
+    "toilet": false,
+    "shade": true,
+    "stroller": false,
+    "description": "けやきの木が並ぶ緑豊かな公園。入口が狭めのためベビーカーは注意"
+  },
+  {
+    "id": "kasugacho-3",
+    "name": "春日町3丁目公園",
+    "address": "練馬区春日町3丁目",
+    "equipment": ["滑り台", "砂場"],
+    "toilet": false,
+    "shade": false,
+    "stroller": true,
+    "description": "コンパクトな公園。小さい子どもがのびのび遊べる落ち着いたスペース"
+  },
+  {
+    "id": "shinba-no-mori",
+    "name": "新場の森公園",
+    "address": "練馬区春日町5丁目",
+    "equipment": ["複合遊具", "ブランコ", "砂場", "水遊び場"],
+    "toilet": true,
+    "shade": true,
+    "stroller": true,
+    "description": "森に囲まれた自然豊かな大型公園。夏は水遊びも楽しめる人気スポット"
+  },
+  {
+    "id": "nerima-joshi",
+    "name": "練馬城址公園",
+    "address": "練馬区春日町6丁目",
+    "equipment": ["複合遊具", "ブランコ", "滑り台", "砂場", "アスレチック"],
+    "toilet": true,
+    "shade": true,
+    "stroller": true,
+    "description": "練馬城跡に整備された広大な公園。充実した遊具とゆったりした芝生広場が魅力"
+  }
+]
